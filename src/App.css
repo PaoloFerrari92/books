@@ -1,38 +1,149 @@
-.App {
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a{
+  color: white;
+  text-decoration: none;
+}
+
+
+.navbar {
+  width: 100%;
+  height: 10vh;
+  background: black;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+@media only screen and (max-width: 850px) {
+  .navbar {
+    width: 232%;
+  }
+}
+.footer{
+  width: 100%;
+  height: 10vh;
+  background: black;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media only screen and (max-width: 850px) {
+  .footer {
+    height: 10vh;
+    width: 232%;
+  }
+}
+.book-list{
+  min-height: 80vh;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  justify-items: center;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media only screen and (max-width: 850px) {
+  .book-list {
+    width: 100%;
+    margin-top: 10%;
+    margin-left:35%;
+    margin-right: 25%;
+    grid-template-columns: repeat(2,1fr);
+    justify-content:space-between;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.favorites{
+  min-height: 80vh;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  justify-items: center;
+  text-align: center;
+}
+
+@media only screen and (max-width: 850px) {
+  .favorites {
+    width: 100%;
+    margin-top: 10%;
+    margin-left:35%;
+    margin-right: 25%;
+    grid-template-columns: repeat(2,1fr);
+    justify-content:space-between;
+  }
+}
+.book-details{
+  min-height: 80vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+padding: 10px;
+}
+
+@media only screen and (max-width: 850px) {
+  .book-details{
+    display: block;  
+    min-height: 80vh;
+    justify-content: center;
+    margin-left: 270px;
+    margin-top: 30px;
+  }
+}
+
+.book-description{
+  margin: 0 10px;
+}
+@media only screen and (max-width: 850px) {
+  .book-description{
+    display: inline;
+    justify-items: center;
+    text-align: justify;
+    margin-top: 20px;
+    margin-left: px;
+
+  }
+}
+
+img {
+  width: 300px;
+  height: 400px;
+  transition: all 0.3s ease;
+}
+
+img:hover{
+ transform: scale(1.1);
+
+}
+
+.book {
+  text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin: 20px 20px;
+}
+
+@media only screen and (max-width: 850px) {
+  .book {
+    width: 100%;
+   
+  }
+}
+
+button {
+  padding: 10px;
+  background-color: black;
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  width: 300px;
+  font-size: 20px;
+  border-radius: 5px;
 }
